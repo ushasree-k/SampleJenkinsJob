@@ -31,8 +31,8 @@ public class webElements extends BaseClass {
 	@FindBy(xpath = "//*[@id='gradeA']")
 	public WebElement WebsiteRating;
 	
-	@FindBy(xpath = "//*[@id='gradeA' and contains(text(), 'B')]")
-	public WebElement API22;
+	@FindBy(xpath = "//*[@id=\"multiTable\"]/tbody/tr[3]/td[4]/div")
+	public WebElement VishwasaRating;
 	
 
 	

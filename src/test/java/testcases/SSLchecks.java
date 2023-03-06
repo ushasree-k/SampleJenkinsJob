@@ -35,24 +35,11 @@ public class SSLchecks extends BaseClass {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
 		wait.until(ExpectedConditions.visibilityOf(elements.Enter_URL)).sendKeys(VishwasaHolidays);
 		wait.until(ExpectedConditions.visibilityOf(elements.Submit)).click();
-		wait.until(ExpectedConditions.visibilityOf(elements.WebsiteRating)).getText();
+		wait.until(ExpectedConditions.visibilityOf(elements.VishwasaRating)).getText();
 		takeScreenshot("VishwasaHolidays");
-		logger.info("VishwasaHolidays Rating is: " + wait.until(ExpectedConditions.visibilityOf(elements.WebsiteRating)).getText());
+		logger.info("VishwasaHolidays Rating is: " + wait.until(ExpectedConditions.visibilityOf(elements.VishwasaRating)).getText());
 
 	}
 	
-	@Test(priority =3, groups = {"Amazon"})
-	public void Amazon() throws WebDriverException, IOException, InterruptedException {
-		
-		webElements elements = new webElements(driver);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
-		wait.until(ExpectedConditions.visibilityOf(elements.Enter_URL)).sendKeys(Amazon);
-		wait.until(ExpectedConditions.visibilityOf(elements.Submit)).click();
-		wait.until(ExpectedConditions.visibilityOf(elements.WebsiteRating)).getText();
-		takeScreenshot("Amazon");
-		logger.info("Amazon Rating is: " + wait.until(ExpectedConditions.visibilityOf(elements.WebsiteRating)).getText());
-	}
-	
-
 
 }
